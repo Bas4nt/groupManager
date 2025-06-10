@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: telegram-sticker-bot
+    runtime: python
+    pythonVersion: "3.10.8"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app/bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: your_bot_token_here
